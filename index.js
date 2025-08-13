@@ -12,6 +12,7 @@ for(let i=0;i<button1.length;i++){
 
 let buttonInnerHTML=this.innerHTML;
 playSound(buttonInnerHTML)
+          addAnimation(buttonInnerHTML);
 
 
 
@@ -66,25 +67,21 @@ else if(key==="l"){
 
 document.addEventListener("keydown", function(event) {
   playSound(event.key);
+    addAnimation(event.key);
 
 });
 
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function() {
-    this.classList.add("pressed");
-
-setTimeout(() =>{
-
-this.classList.remove("pressed");
-
-},100);
-
-
-
-
-  });
+function addAnimation(currentKey) {
+  let activeButton = document.querySelector("." + currentKey);
+  if (activeButton) {
+    activeButton.classList.add("pressed");
+    setTimeout(() => {
+      activeButton.classList.remove("pressed");
+    }, 100);
+  }
 }
+
 
 
 
