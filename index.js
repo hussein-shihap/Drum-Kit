@@ -3,7 +3,7 @@
 
 
 
-const button1= document.querySelectorAll(".drum");
+const buttons= document.querySelectorAll(".drum");
 
 for(let i=0;i<button1.length;i++){
 
@@ -85,6 +85,7 @@ this.classList.remove("pressed");
 
   });
 }
+
 
 
 
