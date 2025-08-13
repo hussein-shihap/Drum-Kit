@@ -68,3 +68,29 @@ document.addEventListener("keydown", function(event) {
   playSound(event.key);
 
 });
+
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() {
+    this.classList.add("pressed");
+
+setTimeout(() =>{
+
+this.classList.remove("pressed");
+
+},100);
+
+
+
+
+  });
+}
+
+
+
+
+
+
+
+
+
